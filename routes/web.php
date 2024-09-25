@@ -14,4 +14,9 @@ use App\Http\Controllers\PageController as MovieController;
 |
 */
 
-Route::get('/', [MovieController::class, 'index']);
+Route::get('/', function () {
+   
+    return view('home');
+});
+
+Route::get('/movie', [MovieController::class, 'index'])->name('movies');
