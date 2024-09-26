@@ -1,29 +1,34 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="movies">
-        <div class="container">
-            <div class="row">
+    <div class="container">
+        <div class="row">
 
-                @foreach ($movies as $movie)
-                    <div class="col-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    {{ $movie->title }}
-                                </h5>
-                                <h6 class="card-subtitle mb-2 text-muted">
-                                    {{ $movie->original_title }}
-                                </h6>
-                                <p class="card-text">{{ $movie->nationality }}</p>
-                                <p class="card-text">{{ $movie->date }}</p>
-                                <p class="card-text">{{ $movie->vote }}</p>
-                            </div>
+            @foreach ($movies as $movie)
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                {{ $movie->title }}
+                            </h5>
+
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                {{ $movie->original_title }}
+                            </h6>
+
+                            <p class="card-text">{{ $movie->nationality }}</p>
+
+                            <p class="card-text">{{ $movie->date }}</p>
+
+                            <p class="card-text">{{ $movie->vote }}</p>
+
                         </div>
                     </div>
-                @endforeach
+                </div>
+            @endforeach
 
-            </div>
+
         </div>
-    </section>
+    </div>
 @endsection
